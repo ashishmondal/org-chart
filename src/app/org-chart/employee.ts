@@ -6,9 +6,9 @@ export class Employee {
 	constructor(orgStructure: string[], manager?: Employee) {
 		this.manager = manager;
 		const [name, ...reports] = orgStructure;
-		this.name = name.split('(')[0].trim().replace(/ /g, '\u00a0');
+		this.name = name.split('(')[0].trim();
 		const desigMatch = name.match(/\(([^)]+)\)/);
-		this.designation = desigMatch && desigMatch[1].trim().replace(/ /g, '\u00a0');
+		this.designation = desigMatch && desigMatch[1].trim();
 
 		this.reports = reports.map(r => r.substring(1))
 			.reduce((previous, current) => {
