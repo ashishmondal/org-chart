@@ -1,0 +1,6 @@
+<div class="oc-h-bar" *ngIf="employee.manager"></div>
+<div class="oc-box">
+	<div class="oc-name">{{employee.name}}</div>
+	<div class="oc-designation">{{employee.designation}}</div>
+</div>
+<div class="oc-h-bar" *ngIf="employee.reports.length"></div>
