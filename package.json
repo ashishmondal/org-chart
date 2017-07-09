@@ -1,6 +1,6 @@
 {
   "name": "ng-org-chart",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Library QuickStart package.json from the documentation, supplemented with testing support",
   "main": "./bundles/ng-org-chart.umd.js",
   "module": "./ng-org-chart.es5.js",
