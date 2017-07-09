@@ -1,7 +1,13 @@
-export class Employee {
+export interface IEmployee {
 	name: string;
 	designation: string;
-	reports: Employee[];
+	subordinates: IEmployee[];
+}
+
+export class Employee implements IEmployee {
+	name: string;
+	designation: string;
+	subordinates: Employee[];
 	manager?: Employee;
 	constructor(orgStructure: string[], manager?: Employee) {
 		this.manager = manager;
@@ -10,7 +16,7 @@ export class Employee {
 		const desigMatch = name.match(/\(([^)]+)\)/);
 		this.designation = desigMatch && desigMatch[1].trim();
 
-		this.reports = reports.map(r => r.substring(1))
+		this.subordinates = reports.map(r => r.substring(1))
 			.reduce((previous, current) => {
 				if (!current.startsWith(' ')) {
 					previous.push([]);

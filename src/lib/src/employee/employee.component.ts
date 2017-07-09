@@ -1,18 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Employee } from '../employee';
+import { Component, Input } from '@angular/core';
+import { IEmployee } from '../employee';
 
 @Component({
 	selector: 'oc-employee',
 	templateUrl: './employee.component.html',
 	styleUrls: ['./employee.component.css']
 })
-export class EmployeeComponent implements OnInit {
+export class EmployeeComponent {
 
-	@Input() employee: Employee;
-
-	constructor() { }
-
-	ngOnInit() {
-	}
-
+	@Input() employee: IEmployee;
+	@Input() hasManager = false;
 }
