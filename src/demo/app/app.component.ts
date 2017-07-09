@@ -7,17 +7,40 @@ import { IEmployee } from 'ng-org-chart';
 })
 export class AppComponent {
 	topEmployee: IEmployee = {
-		name: 'Ashish',
+		name: 'Janis Martin',
 		designation: 'CEO',
 		subordinates: [
 			{
-				name: 'Mark',
-				designation: 'CFO',
-				subordinates: []
+				name: 'Matthew Wikes',
+				designation: 'VP',
+				subordinates: [
+					{
+						name: 'Tina Landry',
+						designation: 'Budget Analyst',
+						subordinates: []
+					}
+
+				]
 			},
 			{
-				name: 'Sundar',
-				designation: 'COO',
+				name: 'Patricia Lyons',
+				designation: 'VP',
+				subordinates: [
+					{
+						name: 'Dylan Wilson',
+						designation: 'Web Manager',
+						subordinates: []
+					},
+					{
+						name: 'Deb Curtis',
+						designation: 'Art Director',
+						subordinates: []
+					}
+				]
+			},
+			{
+				name: 'Larry Phung',
+				designation: 'VP',
 				subordinates: []
 			}
 		]
