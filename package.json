@@ -1,6 +1,6 @@
 {
   "name": "ng-org-chart",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Hierarchical Organization Chart for Angular (4+)",
   "main": "./bundles/ng-org-chart.umd.js",
   "module": "./ng-org-chart.es5.js",
