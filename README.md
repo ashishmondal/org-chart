@@ -1,1 +1,1 @@
-ng-org-chart
+Hierarchical Organization Chart for Angular (4+)

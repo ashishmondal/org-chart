@@ -28,12 +28,16 @@ return Promise.resolve()
     .then(() => console.log('Inlining succeeded.'))
   )
   // Compile to ES2015.
-  .then(() => ngc({ project: `${tempLibFolder}/tsconfig.lib.json` })
+  .then(() => ngc({
+      project: `${tempLibFolder}/tsconfig.lib.json`
+    })
     .then(exitCode => exitCode === 0 ? Promise.resolve() : Promise.reject())
     .then(() => console.log('ES2015 compilation succeeded.'))
   )
   // Compile to ES5.
-  .then(() => ngc({ project: `${tempLibFolder}/tsconfig.es5.json` })
+  .then(() => ngc({
+      project: `${tempLibFolder}/tsconfig.es5.json`
+    })
     .then(exitCode => exitCode === 0 ? Promise.resolve() : Promise.reject())
     .then(() => console.log('ES5 compilation succeeded.'))
   )
@@ -58,12 +62,14 @@ return Promise.resolve()
         // The key here is library name, and the value is the the name of the global variable name
         // the window object.
         // See https://github.com/rollup/rollup/wiki/JavaScript-API#globals for more.
-        '@angular/core': 'ng.core'
+        '@angular/core': 'ng.core',
+        '@angular/common': 'ng.common'
       },
       external: [
         // List of dependencies
         // See https://github.com/rollup/rollup/wiki/JavaScript-API#external for more.
-        '@angular/core'
+        '@angular/core',
+        '@angular/common'
       ],
       plugins: [
         sourcemaps()
@@ -126,7 +132,10 @@ return Promise.resolve()
 // Copy files maintaining relative paths.
 function _relativeCopy(fileGlob, from, to) {
   return new Promise((resolve, reject) => {
-    glob(fileGlob, { cwd: from, nodir: true }, (err, files) => {
+    glob(fileGlob, {
+      cwd: from,
+      nodir: true
+    }, (err, files) => {
       if (err) reject(err);
       files.forEach(file => {
         const origin = path.join(from, file);

@@ -1,7 +1,7 @@
 {
   "name": "ng-org-chart",
   "version": "1.0.1",
-  "description": "Library QuickStart package.json from the documentation, supplemented with testing support",
+  "description": "Hierarchical Organization Chart for Angular (4+)",
   "main": "./bundles/ng-org-chart.umd.js",
   "module": "./ng-org-chart.es5.js",
   "es2015": "./ng-org-chart.js",
