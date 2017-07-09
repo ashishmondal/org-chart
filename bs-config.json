@@ -3,7 +3,7 @@
     "baseDir": "src/demo",
     "routes": {
       "/node_modules": "node_modules",
-      "/org-chart": "src/lib"
+      "/ng-org-chart": "src/lib"
     }
   }
 }

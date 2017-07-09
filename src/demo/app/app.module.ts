@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { OrgChartModule } from 'org-chart';
+import { OrgChartModule } from 'ng-org-chart';
 
 import { AppComponent } from './app.component';
 

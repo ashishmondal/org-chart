@@ -15,8 +15,8 @@
     "annotateForClosureCompiler": true,
     "strictMetadataEmit": true,
     "skipTemplateCodegen": true,
-    "flatModuleOutFile": "org-chart.js",
-    "flatModuleId": "org-chart",
+    "flatModuleOutFile": "ng-org-chart.js",
+    "flatModuleId": "ng-org-chart",
     "genDir": "../../out-tsc/lib-gen-dir/"
   }
 }

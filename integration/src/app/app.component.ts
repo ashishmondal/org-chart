@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { LibService } from 'org-chart';
+import { LibService } from 'ng-org-chart';
 
 @Component({
-  selector: 'integration-app',
-  templateUrl: './app.component.html',
+	selector: 'integration-app',
+	templateUrl: './app.component.html',
 })
 export class AppComponent {
-  meaning: number;
-  constructor(libService: LibService) {
-    this.meaning = libService.getMeaning();
-  }
+	meaning: number;
+	constructor(libService: LibService) {
+		this.meaning = libService.getMeaning();
+	}
 }

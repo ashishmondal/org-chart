@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Employee } from 'org-chart';
+import { Employee } from 'ng-org-chart';
 
 @Component({
 	selector: 'demo-app',

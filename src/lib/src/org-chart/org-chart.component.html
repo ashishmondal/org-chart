@@ -1,13 +1,13 @@
 <oc-employee *ngIf="topEmployee" [employee]="topEmployee"></oc-employee>
 <div class="oc-reports">
-	<ng-container *ngFor="let employee of topEmployee?.reports; first as isFirst; last as isLast">
-		<div class="oc-org-container">
-			<div class="oc-h-bar-container">
-				<div class="oc-h-bar" [style.border-color]="isFirst?'transparent':''"></div>
-				<div class="oc-h-bar-center" ></div>
-				<div class="oc-h-bar" [style.border-color]="isLast?'transparent':''"></div>
-			</div>
-			<oc-org-chart [topEmployee]="employee"></oc-org-chart>
-		</div>
-	</ng-container>
+  <ng-container *ngFor="let employee of topEmployee?.reports; first as isFirst; last as isLast">
+    <div class="oc-org-container">
+      <div class="oc-h-bar-container">
+        <div class="oc-h-bar" [style.border-color]="isFirst?'transparent':''"></div>
+        <div class="oc-h-bar-center"></div>
+        <div class="oc-h-bar" [style.border-color]="isLast?'transparent':''"></div>
+      </div>
+      <ng-org-chart [topEmployee]="employee"></ng-org-chart>
+    </div>
+  </ng-container>
 </div>

@@ -39,7 +39,7 @@
       rxjs: {
         defaultExtension: 'js'
       },
-      'org-chart': {
+      'ng-org-chart': {
         main: 'index.js',
         defaultExtension: 'js',
         meta: {
