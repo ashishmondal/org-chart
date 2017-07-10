@@ -1,19 +1,37 @@
+sudo: required
 dist: trusty
-sudo: false
 language: node_js
 node_js:
-  - "6"
-os:
-  - linux
+- node
+
 before_install:
-  # Use a virtual display.
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-  # Install latest chrome.
-  - export CHROME_BIN=chromium-browser
+- export CHROME_BIN=/usr/bin/google-chrome
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+- sudo apt-get update
+- sudo apt-get install -y libappindicator1 fonts-liberation
+- wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+- sudo dpkg -i google-chrome*.deb
+
 install:
-  - npm install
+- npm install
+
 script:
-  - npm run lint
-  - npm run test:once
-  - npm run integration
+- npm run lint
+- npm run test:once
+- npm run integration
+
+after_success:
+ - npm run build
+
+before_deploy:
+  - cd dist
+deploy:
+  provider: npm
+  email: ashish@mondal.in
+  skip_cleanup: true
+  api_key:
+    secure: uQiauMJZmMUV40GMTgd13Tlmbw167D4mEqWDirIQeoMUV2HSAdNvmqnNmkTPhzcEK25TZBXPz06+qJcs0Xd+phTp2ARSYZiMgBMVPuEOfmS0WGz10PMc7UdLKTD7kdLWDQ0z+kUOsqcHBaaDsROJxy/JznlmUTnndIaTPfGyL+ko9H+ErMZ9ZhZR06ygicTmQ8mp4D4P94GlC2xlrdzfKiYPQQ7eGmfRjrcwKuTWuDNFnsDsiC6oQF3IR12fLLFr529ZN6Qx9vSZ7o/fB/7We4qVoykXW0UpNEc2IDAQ2pj5OuinJw9J9PnBvZZ17tNi1UhQX9S31oA9V1lKEMJIu3nb5aKWrZ1WBkARBOYo5K+q/EDFZyp57/Yy2eBqJfvAGNO8sBmryjwZ98cfrDSQDEbwXhhrArRcPRGYbKD3Gl2/7QdSO6vz1tU/hs7se4GqFxAR8h4twI7W+K1oMS8l5KUvNej4JrT2WHbo3AVbddrxJRADDRbKNljyJtRKQXQn9+P0PJTMrI7xRGAObl0AqvTF3+FF0SZBc9OLJ/jI5uoXvw2+Ao5CGsKzZGwmMpZBMaAcC6MXZKBliKr+XgN/qgpsv9tD+h30Vm37cU94tdzXHlKedEoyX0AgbUyEOuZwRQBjn54TvUMeq8WzUL3C00nwztHsjTy8Pw3OaiMg5+g=
+  on:
+    branch: master
+    tags: true
