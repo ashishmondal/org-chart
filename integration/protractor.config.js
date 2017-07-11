@@ -7,6 +7,7 @@ exports.config = {
 		'browserName': 'chrome'
 	},
 	directConnect: true,
+	getPageTimeout: 20000,
 	baseUrl: 'http://localhost:8080/',
 	framework: 'jasmine2'
 };
