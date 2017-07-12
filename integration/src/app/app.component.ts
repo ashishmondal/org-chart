@@ -1,13 +1,48 @@
 import { Component } from '@angular/core';
-import { LibService } from 'ng-org-chart';
+import { IEmployee } from 'ng-org-chart';
 
 @Component({
 	selector: 'integration-app',
-	templateUrl: './app.component.html',
+	templateUrl: './app.component.html'
 })
 export class AppComponent {
-	meaning: number;
-	constructor(libService: LibService) {
-		this.meaning = libService.getMeaning();
-	}
+	topEmployee: IEmployee = {
+		name: 'Janis Martin',
+		designation: 'CEO',
+		subordinates: [
+			{
+				name: 'Matthew Wikes',
+				designation: 'VP',
+				subordinates: [
+					{
+						name: 'Tina Landry',
+						designation: 'Budget Analyst',
+						subordinates: []
+					}
+
+				]
+			},
+			{
+				name: 'Patricia Lyons',
+				designation: 'VP',
+				subordinates: [
+					{
+						name: 'Dylan Wilson',
+						designation: 'Web Manager',
+						subordinates: []
+					},
+					{
+						name: 'Deb Curtis',
+						designation: 'Art Director',
+						subordinates: []
+					}
+				]
+			},
+			{
+				name: 'Larry Phung',
+				designation: 'VP',
+				subordinates: []
+			}
+		]
+	};
 }

@@ -1,21 +1,23 @@
-import { browser, element, by } from 'protractor';
+import { browser, element, by, $$ } from 'protractor';
 
-describe('QuickStart Lib E2E Tests', function () {
+describe('Organizational Chart E2E Tests', function () {
 
-  beforeEach(() => browser.get(''));
+	beforeEach(() => browser.get(''));
 
-  afterEach(() => {
-    browser.manage().logs().get('browser').then((browserLog: any[]) => {
-      expect(browserLog).toEqual([]);
-    });
-  });
+	afterEach(() => {
+		browser.manage().logs().get('browser').then((browserLog: any[]) => {
+			expect(browserLog).toEqual([]);
+		});
+	});
 
-  it('should display lib', () => {
-    expect(element(by.css('h2')).getText()).toEqual('Hello Angular Library');
-  });
+	it('should display org-chart', () => {
+		const orgCharts = $$('ng-org-chart');
+		expect(orgCharts.count()).toEqual(7);
+	});
 
-  it('should display meaning', () => {
-    expect(element(by.css('h3')).getText()).toEqual('Meaning is: 42');
-  });
+	it('should display employees', () => {
+		const orgCharts = $$('oc-employee');
+		expect(orgCharts.count()).toEqual(7);
+	});
 
 });
