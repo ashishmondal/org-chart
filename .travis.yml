@@ -19,7 +19,6 @@ install:
 script:
 - npm run lint
 - npm run test:once
-- npm run integration
 
 after_success:
  - npm run build
