@@ -75,4 +75,4 @@ export class AppComponent {
 
 Here is the rendered output:
 
-![Sample Organizational Chart](/sample-org-chart.png?raw=true "Sample Organizational Chart")
+![Sample Organizational Chart](https://raw.githubusercontent.com/nulldev07/org-chart/master/sample-org-chart.png)
