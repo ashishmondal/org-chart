@@ -1,4 +1,5 @@
 # Hierarchical Organization Chart for Angular (4+)
+[![Build Status](https://travis-ci.org/nulldev07/org-chart.svg?branch=master)](https://travis-ci.org/nulldev07/org-chart)
 
 The `ng-org-chart` component displays heirarchal Organizational Chart.
 
