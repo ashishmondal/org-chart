@@ -1,28 +1,23 @@
 :host {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .oc-reports {
-  display: flex;
-  flex: 1;
+	display: flex;
+	flex: 1;
 }
 
 .oc-org-container {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .oc-h-bar-container {
-  display: flex;
-}
-
-.oc-h-bar-center {
-  border: 1px solid dodgerblue;
+	display: flex;
 }
 
 .oc-h-bar {
-  border: 1px solid dodgerblue;
-  flex: 1;
+	flex: 1;
 }

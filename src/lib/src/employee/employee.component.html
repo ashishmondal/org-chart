@@ -1,6 +1,6 @@
-<div class="oc-h-bar" *ngIf="hasManager"></div>
-<div class="oc-box">
+<div class="oc-h-bar oc-border" *ngIf="hasManager"></div>
+<div class="oc-box oc-border oc-background">
 	<div class="oc-name">{{employee?.name}}</div>
 	<div class="oc-designation">{{employee?.designation}}</div>
 </div>
-<div class="oc-h-bar" *ngIf="employee?.subordinates.length"></div>
+<div class="oc-h-bar oc-border" *ngIf="employee?.subordinates.length"></div>
