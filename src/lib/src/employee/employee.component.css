@@ -1,31 +1,17 @@
 :host {
-  margin: 0 1em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	margin: 0 1em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .oc-box {
-  border: 1px solid dodgerblue;
-  background-color: cornflowerblue;
-  padding: 0.25em 1em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	padding: 0.25em 1em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .oc-h-bar {
-  border: 1px solid dodgerblue;
-  height: 0.5em;
-}
-
-.oc-name {
-  font-family: Bitter, serif;
-  white-space: nowrap;
-}
-
-.oc-designation {
-  font-family: Rajdhani, sans-serif;
-  font-style: italic;
-  white-space: nowrap;
+	height: 0.5em;
 }
