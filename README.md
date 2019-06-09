@@ -1,5 +1,6 @@
 # Hierarchical Organization Chart for Angular (4+)
-[![Build Status](https://travis-ci.org/nulldev07/org-chart.svg?branch=master)](https://travis-ci.org/nulldev07/org-chart)
+
+**This repo is deprecated and no longer maintained. Please consider using `@mondal/org-chart` from [Mondal UI](https://github.com/ashishmondal/mondal-ui).**
 
 The `ng-org-chart` component displays heirarchal Organizational Chart.
 
